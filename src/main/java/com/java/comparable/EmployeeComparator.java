@@ -1,0 +1,17 @@
+package com.java.comparable;
+
+import java.util.Comparator;
+
+public class EmployeeComparator implements Comparator<Employee> {
+
+    @Override
+    public int compare(Employee o1, Employee o2) {
+      //  return o1.getName().compareTo(o2.getName());
+        int result = o1.getName().compareTo(o2.getName());
+        if(result  == 0)
+        {
+            return o1.getSalary().compareTo(o2.getSalary());
+        }
+        return result;
+    }
+}
